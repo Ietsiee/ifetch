@@ -1,5 +1,4 @@
-[/etc/ifetch/logo.txt]
-
+[~/.config/ifetch/logo.txt]
 (You can edit me)
    -_   
      /\_/\
