@@ -1,5 +1,5 @@
 # Ifetch
-Ifetch is a simple tool that prints out system information.
+Ifetch is a simple and lightweight tool that prints out system information.
 
 <img src="images/screenshot.png" alt="Ifetch Screenshot" width="50%">
 
@@ -15,8 +15,14 @@ Ifetch is a simple tool that prints out system information.
 
 ## Requirments
 - A POSIX shell installed like Bash, Dash, Ash and more
-- Git is installed (Needed for installation)
+- Sudo works (Needed for installation and updating)
+- Git is installed (Needed for installation and updating)
 
 ## Installation
 Install Ifetch with a single command:
 ```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/setup-ifetch.sh | sh```
+
+## Updating
+To update Ifetch with a single command:
+```ifetch --update``` or ```ifetch -u```
+Note: this will keep your files in **~/.config/ifetch** but replaces files in **/etc/ifetch** and **/bin/ifetch**
