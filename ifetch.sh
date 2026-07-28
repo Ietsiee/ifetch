@@ -64,4 +64,4 @@ do
             ;;
     esac
 
-done < /etc/ifetch/ifetch.config
+done < "$config"
