@@ -1,5 +1,12 @@
 #!/bin/sh
 
+#Find config file
+if [ -f "$HOME/.config/ifetch/ifetch.config" ]; then
+    config="$HOME/.config/ifetch/ifetch.config"
+else
+    config="/etc/ifetch/ifetch.config"
+fi
+
 while IFS= read -r line
 do
     #Skip empty lines
