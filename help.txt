@@ -1,0 +1,54 @@
+ifetch help page
+
+Usage: fetch
+
+Options:
+    -h, --help
+        show this help page
+
+    -v, --version
+        show version of ifecth
+
+    -u, --update
+        updates ifetch 
+
+Files:
+    /etc/ifetch/ifetch.config
+        Configuration file, you can edit this
+
+    /etc/ifetch/help.txt
+        ifetch help page
+
+    /etc/ifetch/logo.txt
+        logo that ifetch displays, you can edit this
+
+    /etc/ifetch/modules
+        modules like user.sh, logo.sh and more
+
+Configuration: module=<name> [--color color]
+
+Example: module=user --color green
+
+Modules:
+    user
+        shows current user
+
+    hostname
+        shows the system hostname
+
+    kernel
+        shows the linux kernel version
+
+    logo
+        displays the ASCII logo in /etc/ifetch/logo.txt
+
+    shell
+        shows the current used shell
+  
+    os
+        shows the os name
+
+    uptime
+        shows how long the system has been running
+
+Colors: black red green yellow blue mangenta cyan white
