@@ -15,7 +15,7 @@ Ifetch is a simple tool that prints out system information.
 
 ## Requirments
 - A POSIX shell installed like Bash, Dash, Ash and more
-- Git is installed
+- Git is installed (Needed for installation)
 
 ## Installation
 Install Ifetch with a single command:
