@@ -12,7 +12,7 @@ if command -v ifetch >/dev/null 2>&1; then
 fi
 
 echo "Cloning ifetch..."
-git clone -q https://github.com/Ietsiee/ifetch
+git clone --depth 1 -q https://github.com/Ietsiee/ifetch.git
 
 cd ifetch
 
