@@ -2,6 +2,8 @@ ifetch help page
 
 Usage: fetch
 
+Example: ifetch --update
+
 Options:
     -h, --help
         show this help page
@@ -14,13 +16,19 @@ Options:
 
 Files:
     /etc/ifetch/ifetch.config
-        Configuration file, you can edit this
+        system-wide configuration file
+
+    ~/.config/ifetch/ifetch.config
+        users configuration file, you can edit this
+
+    /etc/ifetch/logo.txt
+        system-wide ifetch logo
+
+    ~/.config/ifetch/logo.txt
+        users ifetch logo, you can edit this
 
     /etc/ifetch/help.txt
         ifetch help page
-
-    /etc/ifetch/logo.txt
-        logo that ifetch displays, you can edit this
 
     /etc/ifetch/modules
         modules like user.sh, logo.sh and more
