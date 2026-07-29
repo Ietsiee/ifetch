@@ -59,4 +59,10 @@ Modules:
     uptime
         shows how long the system has been running
 
+    ram
+        shows ram usages of the system
+
+    pkgs
+        shows the total installed packages, supported package managers: dpkg apk pacman emerge
+
 Colors: black red green yellow blue mangenta cyan white
