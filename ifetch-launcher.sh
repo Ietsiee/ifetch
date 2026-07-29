@@ -5,7 +5,7 @@ case "$1" in
         cat /etc/ifetch/help.txt
         ;;
     -v|--version)
-        echo ifetch: 1.0.1
+        echo ifetch: 1.0.2
         ;; 
     -u|--update)
         curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/setup-ifetch.sh | sh
@@ -16,7 +16,7 @@ case "$1" in
         read answer
 
         if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
-            cp /etc/ifetch/ifetch.config "$HOME/.config/ifetch.config"
+            cp /etc/ifetch/ifetch.config "$HOME/.config/ifetch/ifetch.config"
             echo "Done"
             ifetch
         else
