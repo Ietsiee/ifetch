@@ -14,6 +14,9 @@ Options:
     -u, --update
         updates ifetch 
 
+    -d, --default
+        resets users config to the default one
+
 Files:
     /etc/ifetch/ifetch.config
         system-wide configuration file
