@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-cd
+cd /tmp
 
 rm -rf ifetch
 
@@ -11,8 +11,12 @@ if command -v ifetch >/dev/null 2>&1; then
     sudo rm -rf /etc/ifetch
 fi
 
-echo "Cloning ifetch..."
-git clone --depth 1 -q https://github.com/Ietsiee/ifetch.git
+echo "downloading ifetch.tar.gz..."
+wget -O ifetch.tar.gz https://github.com/Ietsiee/ifetch/archive/refs/heads/main.tar.gz
+
+echo "Extracting..."
+tar -xzf ifetch.tar.gz
+mv ifetch-main ifetch
 
 cd ifetch
 
@@ -45,6 +49,8 @@ fi
 echo "Cleaning up..."
 cd ..
 rm -rf ifetch
+rm ifetch.tar.gz
+cd
 
 echo "Successfully installed ifetch"
 ifetch
