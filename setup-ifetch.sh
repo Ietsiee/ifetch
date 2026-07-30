@@ -12,7 +12,7 @@ if command -v ifetch >/dev/null 2>&1; then
 fi
 
 echo "downloading ifetch.tar.gz..."
-wget -O ifetch.tar.gz https://github.com/Ietsiee/ifetch/archive/refs/heads/main.tar.gz
+wget -q -O ifetch.tar.gz https://github.com/Ietsiee/ifetch/archive/refs/heads/main.tar.gz
 
 echo "Extracting..."
 tar -xzf ifetch.tar.gz
