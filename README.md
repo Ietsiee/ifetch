@@ -16,7 +16,7 @@ Ifetch is a simple and lightweight tool that prints out system information.
 ## Requirments
 - A POSIX shell installed like Bash, Dash, Ash and more
 - Sudo works (Needed for installation and updating)
-- Git is installed (Needed for installation and updating)
+- Tar, Sudo and wget are installed (Needed for installation and updating)
 
 ## Installation
 Install Ifetch with a single command:
