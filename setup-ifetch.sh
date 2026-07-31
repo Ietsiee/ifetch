@@ -52,5 +52,5 @@ rm -rf ifetch
 rm ifetch.tar.gz
 cd
 
-echo "Successfully installed ifetch"
+echo "Successfully installed ifetch!"
 ifetch
