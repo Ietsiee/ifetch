@@ -1,0 +1,25 @@
+pkgname=ifetch
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Ifetch is a simple tool that prints out system information"
+arch=('any')
+url="https://github.com/Ietsiee/ifetch"
+license=('MIT')
+depends=('bash')
+source=("https://github.com/Ietsiee/ifetch/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('SKIP')
+
+package() {
+    cd "$srcdir/$pkgname-$pkgver"
+
+    install -Dm755 ifetch-launcher.sh "$pkgdir/usr/bin/ifetch"
+
+    install -dm755 "$pkgdir/etc/ifetch"
+    install -Dm755 ifetch.sh "$pkgdir/etc/ifetch/ifetch.sh"
+    install -Dm644 help.txt "$pkgdir/etc/ifetch/help.txt"
+    install -Dm644 logo.txt "$pkgdir/etc/ifetch/logo.txt"
+    install -Dm644 ifetch.config "$pkgdir/etc/ifetch/ifetch.config"
+
+    cp -r modules "$pkgdir/etc/ifetch/"
+    chmod -R 755 "$pkgdir/etc/ifetch/modules"
+}
