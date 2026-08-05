@@ -1,7 +1,7 @@
 # Ifetch
 Ifetch is a simple and lightweight tool that prints out system information.
 
-<img src="images/screenshot.png" alt="Ifetch Screenshot" width="50%">
+<img src="ifetch-screenshot.png" alt="Ifetch Screenshot" width="50%">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub stars](https://img.shields.io/github/stars/Ietsiee/ifetch?style=flat)
