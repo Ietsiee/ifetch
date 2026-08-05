@@ -24,5 +24,4 @@ Install Ifetch with a single command:
 
 ## Updating
 To update Ifetch with a single command:
-```ifetch --update``` or ```ifetch -u```
-Note: this will keep your files in **~/.config/ifetch** but replaces files in **/etc/ifetch** and **/bin/ifetch**
+```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/setup-ifetch.sh | sh```

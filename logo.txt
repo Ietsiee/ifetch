@@ -1,6 +1,3 @@
-[~/.config/ifetch/logo.txt]
-(You can edit me)
-   -_   
-     /\_/\
-    ( o.o )
-     > ^ <
+┌───────────┐
+│ ifetch >. │
+└───────────┘

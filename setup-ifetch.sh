@@ -34,23 +34,10 @@ sudo cp help.txt /etc/ifetch/help.txt
 sudo cp logo.txt /etc/ifetch/logo.txt
 sudo cp ifetch.config /etc/ifetch/ifetch.config
 
-mkdir -p "$HOME/.config/ifetch"
-if [ -f "$HOME/.config/ifetch/ifetch.config" ]; then
-    echo "ifetch.config already exists"
-else
-    cp ifetch.config "$HOME/.config/ifetch/ifetch.config"
-fi
-if [ -f "$HOME/.config/ifetch/logo.txt" ]; then
-    echo "logo.txt already exists"
-else
-    cp logo.txt "$HOME/.config/ifetch/logo.txt"
-fi
-
 echo "Cleaning up..."
 cd ..
 rm -rf ifetch
 rm ifetch.tar.gz
-cd
 
 echo "Successfully installed ifetch!"
 ifetch

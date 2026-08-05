@@ -2,7 +2,7 @@ ifetch help page
 
 Usage: fetch
 
-Example: ifetch --update
+Example: ifetch -v
 
 Options:
     -h, --help
@@ -10,12 +10,6 @@ Options:
 
     -v, --version
         show version of ifecth
-
-    -u, --update
-        updates ifetch 
-
-    -d, --default
-        resets users config to the default one
 
 Files:
     /etc/ifetch/ifetch.config
@@ -36,9 +30,9 @@ Files:
     /etc/ifetch/modules
         modules like user.sh, logo.sh and more
 
-Configuration: module=<name> [--color color]
+Configuration: module=<name> <option> <color>
 
-Example: module=user --color green
+Example: module=ram -g --color green
 
 Modules:
     user
@@ -63,7 +57,21 @@ Modules:
         shows how long the system has been running
 
     ram
-        shows ram usages of the system
+        shows ram usage of the system
+        Option: -g to show it in GB instead of MB
+    
+    disk
+        shows disk usage
+        Option: -t to show it in TB instead of GB
+
+    cpu
+        shows the cpu name
+
+    network
+        shows the local-ip of the system
+
+    separator
+        creates a separator line
 
     pkgs
         shows the total installed packages, supported package managers: dpkg apk pacman emerge
