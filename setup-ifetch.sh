@@ -5,6 +5,14 @@ cd /tmp
 
 rm -rf ifetch
 
+cat << "EOF"
+ _  __      _       _
+(_)/ _| ___| |_ ___| |__
+| | |_ / _ \ __/ __| '_ \
+| |  _|  __/ || (__| | | |
+|_|_|  \___|\__\___|_| |_|
+EOF
+
 if command -v ifetch >/dev/null 2>&1; then
     echo "Updating ifetch..."
     sudo rm /bin/ifetch
