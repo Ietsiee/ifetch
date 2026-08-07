@@ -15,7 +15,7 @@ EOF
 
 if command -v ifetch >/dev/null 2>&1; then
     echo "Updating ifetch..."
-    sudo rm /bin/ifetch
+    sudo rm -rf /bin/ifetch
     sudo rm -rf /etc/ifetch
     sudo rm -rf /usr/bin/ifetch
 fi
