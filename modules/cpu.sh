@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "CPU: $(lscpu | awk -F: '/Model name/ {print $2; exit}' | xargs)"
+echo "CPU: $(grep 'model name' /proc/cpuinfo | head -n 1 | cut -d: -f2)"
