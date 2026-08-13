@@ -19,9 +19,9 @@ ifetch is a simple and lightweight tool that prints out system information.
 - Tar, Sudo and wget are installed (Needed for installation and updating)
 
 ## Installation
-Install Ifetch with a single command:
+Install ifetch with a single command:
 ```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/setup-ifetch.sh | sh```
 
 ## Updating
-To update Ifetch with a single command:
+To update ifetch with a single command:
 ```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/setup-ifetch.sh | sh```
