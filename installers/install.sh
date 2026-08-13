@@ -15,7 +15,6 @@ EOF
 
 if command -v ifetch >/dev/null 2>&1; then
     echo "Updating ifetch..."
-    sudo rm -rf /bin/ifetch
     sudo rm -rf /etc/ifetch
     sudo rm -rf /usr/bin/ifetch
 fi
@@ -34,7 +33,7 @@ chmod +x ifetch.sh
 chmod +x ifetch-launcher.sh    
 
 echo "Installing ifetch..."
-sudo cp ifetch-launcher.sh /bin/ifetch
+sudo cp ifetch-launcher.sh /usr/bin/ifetch
 
 sudo mkdir -p /etc/ifetch
 sudo cp ifetch.sh /etc/ifetch/ifetch.sh

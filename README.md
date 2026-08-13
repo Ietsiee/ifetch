@@ -15,13 +15,22 @@ ifetch is a simple and lightweight tool that prints out system information.
 
 ## Requirments
 - A POSIX shell installed like Bash, Dash, Ash and more
-- Sudo works (Needed for installation and updating)
-- Tar, Sudo and wget are installed (Needed for installation and updating)
+- Basix userland tools
 
 ## Installation
-Install ifetch with a single command:
-```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/setup-ifetch.sh | sh```
+You can install ifetch using one of the following methods
 
-## Updating
-To update ifetch with a single command:
-```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/setup-ifetch.sh | sh```
+### Linux
+Requirments: sudo, tar and wget
+```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install.sh | sh```
+
+### Termux
+Requirments: tar and wget
+```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install-termux.sh | sh```
+
+### Make
+Requirments: sudo, install and make
+``` git clone https://github.com/Ietsiee/ifetch.git
+cd ifetch
+sudo make install
+```
