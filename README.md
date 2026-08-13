@@ -30,7 +30,7 @@ Requirments: tar and wget
 
 ### Make
 Requirments: sudo, install and make
-``` git clone https://github.com/Ietsiee/ifetch.git
+```git clone https://github.com/Ietsiee/ifetch.git
 cd ifetch
 sudo make install
 ```
