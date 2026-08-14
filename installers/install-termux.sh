@@ -47,6 +47,7 @@ cp logo.txt "$PREFIX/etc/ifetch/logo.txt"
 cp ifetch.config "$PREFIX/etc/ifetch/ifetch.config"
 
 mkdir -p "$HOME/.config/ifetch"
+cp logo.txt 	"$HOME/.config/ifetch/logo.txt"
 cp ifetch.config "$HOME/.config/ifetch/ifetch.config"
 
 echo "Cleaning up..."
