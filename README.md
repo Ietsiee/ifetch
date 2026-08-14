@@ -1,7 +1,9 @@
 # ifetch
 ifetch is a simple and lightweight tool that prints out system information.
 
-<img src="screenshot.png" alt="ifetch Screenshot" width="50%">
+<p align="center">
+  <img src="screenshot.png" alt="ifetch Screenshot" width="100%">
+</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub stars](https://img.shields.io/github/stars/Ietsiee/ifetch?style=flat)
@@ -22,11 +24,23 @@ You can install ifetch using one of the following methods
 
 ### Linux
 Requirments: sudo, tar and wget
-```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install.sh | sh```
+```
+curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install.sh | sh
+```
 
 ### Termux
 Requirments: tar and wget
-```curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install-termux.sh | sh```
+```
+curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install-termux.sh | sh
+```
+
+### AUR
+**Coming soon!**
+Requirments: base-devel
+```
+yay -S ifetch
+paru -S ifetch
+```
 
 ### Make
 Requirments: sudo, install and make
