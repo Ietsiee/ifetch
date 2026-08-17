@@ -20,7 +20,7 @@ ifetch is a simple and lightweight tool that prints out system information.
 - Basix userland tools
 
 ## Installation
-You can install ifetch using one of the following methods
+You can install ifetch using one of the following methods.
 
 ### Linux
 Requirments: sudo, tar and wget
@@ -36,7 +36,7 @@ curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/inst
 
 ### AUR
 **Coming soon!**
-Requirments: base-devel
+Requirements: base-devel, git, and an AUR helper like yay or paru.
 ```
 yay -S ifetch
 paru -S ifetch
