@@ -49,6 +49,12 @@ Modules:
 
     shell
         shows the current used shell
+
+    timezone
+        shows the timezone of the system
+
+    language
+        shows the language of the system
   
     os
         shows the os name
@@ -72,6 +78,12 @@ Modules:
 
     separator
         creates a separator line
+
+    temperature
+        shows the current temperature of the system
+
+    process
+        shows the total number of processes currently running
 
     pkgs
         shows the total installed packages, supported package managers: dpkg apk pacman emerge

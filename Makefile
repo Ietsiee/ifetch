@@ -22,7 +22,7 @@ install:
 	@install -m 644 help.txt $(CONFDIR)/help.txt
 	@install -m 644 logo.txt $(CONFDIR)/logo.txt
 
-	@echo "ifetch installed successfully."
+	@echo "ifetch installed successfully!"
 
 uninstall:
 	@echo "Uninstalling ifetch..."
@@ -30,4 +30,4 @@ uninstall:
 	@rm -f $(BINDIR)/ifetch
 	@rm -rf $(CONFDIR)
 
-	@echo "ifetch uninstalled."
+	@echo "ifetch uninstalled!"

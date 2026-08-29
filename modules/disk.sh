@@ -1,5 +1,4 @@
 #!/bin/sh
-
 read used total <<EOF
 $(df -k / | awk 'NR==2 {print $3, $2}')
 EOF

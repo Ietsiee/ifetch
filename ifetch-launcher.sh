@@ -5,7 +5,7 @@ case "$1" in
         cat /etc/ifetch/help.txt
         ;;
     -v|--version)
-        echo ifetch: 1.0.2
+        echo ifetch: 1.0.3
         ;; 
     "")
         /etc/ifetch/ifetch.sh

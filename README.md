@@ -15,6 +15,11 @@ ifetch is a simple and lightweight tool that prints out system information.
 - Simple configuration
 - Easy to add your own modules
 
+## Usage
+- ```ifetch``` Runs ifetch
+- ```ifetch -h / --help``` Shows help.txt
+- ```ifetch -v / --version``` Shows current version
+
 ## Requirments
 - A POSIX shell installed like Bash, Dash, Ash and more
 - Basix userland tools
@@ -43,7 +48,7 @@ paru -S ifetch
 ```
 
 ### Make
-Requirments: sudo, install and make
+Requirments: sudo and make
 ```
 git clone https://github.com/Ietsiee/ifetch.git
 cd ifetch

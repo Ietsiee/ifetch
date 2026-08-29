@@ -1,23 +1,24 @@
 #!/bin/sh
 
-#Find config file
+# Find config file
 if [ -f "$HOME/.config/ifetch/ifetch.config" ]; then
     config="$HOME/.config/ifetch/ifetch.config"
 else
     config="/etc/ifetch/ifetch.config"
 fi
 
+# Read config file
 while IFS= read -r line
 do
-    #Skip empty lines
+    # Skip empty lines
     [ -z "$line" ] && continue
 
-    #Skip comments
+    # Skip comments
     case "$line" in
         \#*) continue ;;
     esac
 
-    #Read module
+    # Read module
     case "$line" in
         module=*)
             args="${line#module=}"
