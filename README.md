@@ -20,7 +20,7 @@ ifetch is a simple and lightweight tool that prints out system information.
 - ```ifetch -h / --help``` Shows help.txt
 - ```ifetch -v / --version``` Shows current version
 
-## Requirments
+## Requirements
 - A POSIX shell installed like Bash, Dash, Ash and more
 - Basix userland tools
 
@@ -28,13 +28,13 @@ ifetch is a simple and lightweight tool that prints out system information.
 You can install ifetch using one of the following methods.
 
 ### Linux
-Requirments: sudo, tar and wget
+Requirements: curl, sudo, tar and wget
 ```
 curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install.sh | sh
 ```
 
 ### Termux
-Requirments: tar and wget
+Requirements: curl, tar and wget
 ```
 curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install-termux.sh | sh
 ```
@@ -48,7 +48,7 @@ paru -S ifetch
 ```
 
 ### Make
-Requirments: sudo and make
+Requirements: sudo, git and make
 ```
 git clone https://github.com/Ietsiee/ifetch.git
 cd ifetch
