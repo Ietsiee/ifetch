@@ -1,11 +1,11 @@
 pkgname=ifetch
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="Ifetch is a simple tool that prints out system information"
 arch=('any')
 url="https://github.com/Ietsiee/ifetch"
 license=('MIT')
-depends=('sh')
+depends=('sh' 'curl')
 source=("https://github.com/Ietsiee/ifetch/archive/refs/tags/v${pkgver}.tar.gz")
 sha256sums=('SKIP')
 

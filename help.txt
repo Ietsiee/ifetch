@@ -6,10 +6,10 @@ Example: ifetch -v
 
 Options:
     -h, --help
-        show this help page
+        shows this help page
 
     -v, --version
-        show version of ifecth
+        shows current version of ifetch
 
 Files:
     /etc/ifetch/ifetch.config
