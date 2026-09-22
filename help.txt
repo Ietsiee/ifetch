@@ -82,6 +82,14 @@ Modules:
     temperature
         shows the current temperature of the system
 
+    weather
+        shows the current weather of a city in °C 
+        module=weather <city>
+
+    crypto
+        shows the price of a cryptocoin in $
+        module=crypto <cryptocoin>
+
     process
         shows the total number of processes currently running
 

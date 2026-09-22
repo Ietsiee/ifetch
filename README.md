@@ -23,18 +23,18 @@ ifetch is a fast and lightweight tool for displaying system information, written
 ## Requirements
 - A POSIX-compatible shell such as Bash, Dash, or Ash
 - Basic userland tools
-
+- curl
 ## Installation
 You can install ifetch using one of the following methods.
 
 ### Linux
-**Requirements:** `curl`, `sudo`, `tar` and `wget`
+**Requirements:** `sudo`, `tar` and `wget`
 ```
 curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install.sh | sh
 ```
 
 ### Termux
-**Requirements:** `curl`, `tar` and `wget`
+**Requirements:** `tar` and `wget`
 ```
 curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install-termux.sh | sh
 ```
@@ -93,3 +93,7 @@ esac
 
 ## Feedback
 Found a bug or have an idea for ifetch? Open an issue and let me know!
+
+## APIs
+- Binance - crypto prices
+- wttr.in - weather
