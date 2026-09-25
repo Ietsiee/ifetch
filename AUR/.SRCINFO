@@ -1,6 +1,6 @@
 pkgbase = ifetch
 	pkgdesc = Ifetch is a simple tool that prints out system information
-	pkgver = 1.0.4
+	pkgver = 1.0.5
 	pkgrel = 1
 	url = https://github.com/Ietsiee/ifetch
 	arch = any

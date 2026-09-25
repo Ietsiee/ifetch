@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # Find config file
-if [ -f "$HOME/.config/ifetch/ifetch.config" ]; then
+if [ -n "$1" ]; then
+    config="$1"
+elif [ -f "$HOME/.config/ifetch/ifetch.config" ]; then
     config="$HOME/.config/ifetch/ifetch.config"
 else
     config="/etc/ifetch/ifetch.config"
@@ -22,12 +24,11 @@ do
     case "$line" in
         module=*)
             args="${line#module=}"
-            module="${args%% *}"
-
             color=""
 
-            #Read color option
+            # Read color option
             set -- $args
+            module="$1"
             shift
 
             while [ $# -gt 0 ]; do
@@ -37,13 +38,14 @@ do
                         shift 2
                         ;;
                     *)
-                        shift
+                        break
                         ;;
                 esac
             done
 
-            output=$(/etc/ifetch/modules/$module.sh)
+            output=$(/etc/ifetch/modules/"$module".sh "$@")
 
+            # Colors
             case "$color" in
                 black)   color=30 ;;
                 red)     color=31 ;;

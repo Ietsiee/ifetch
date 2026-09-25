@@ -17,6 +17,7 @@ ifetch is a fast and lightweight tool for displaying system information, written
 
 ## Usage
 - ```ifetch``` Runs ifetch
+- ```ifetch <config path>``` Runs ifetch with custom config path
 - ```ifetch -h / --help``` Shows help.txt
 - ```ifetch -v / --version``` Shows current version
 
@@ -24,8 +25,13 @@ ifetch is a fast and lightweight tool for displaying system information, written
 - A POSIX-compatible shell such as Bash, Dash, or Ash
 - Basic userland tools
 - curl
+
 ## Installation
 You can install ifetch using one of the following methods.
+
+> [!WARNING]
+> When installing or updating ifetch, your `/etc/ifetch/ifetch.config` will be replaced.
+> To prevent losing your configuration, create your config at `~/.config/ifetch/ifetch.config`.
 
 ### Linux
 **Requirements:** `sudo`, `tar` and `wget`
@@ -33,7 +39,7 @@ You can install ifetch using one of the following methods.
 curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install.sh | sh
 ```
 
-### Termux
+### Termux Unstable
 **Requirements:** `tar` and `wget`
 ```
 curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install-termux.sh | sh

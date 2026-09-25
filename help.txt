@@ -79,6 +79,14 @@ Modules:
     separator
         creates a separator line
 
+    echo
+        prints a custom message
+        module=echo "I Love Linux" --color blue
+
+    command
+        run a custom command
+        module=command "cd && cd .."
+
     temperature
         shows the current temperature of the system
 

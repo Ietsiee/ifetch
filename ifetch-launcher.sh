@@ -5,10 +5,10 @@ case "$1" in
         cat /etc/ifetch/help.txt
         ;;
     -v|--version)
-        echo ifetch: 1.0.4
+        echo ifetch: 1.0.5
         ;; 
     "")
-        /etc/ifetch/ifetch.sh
+        /etc/ifetch/ifetch.sh "$1"
         ;;
     *)
         echo "Unkown option: $1"
