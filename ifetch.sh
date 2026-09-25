@@ -27,7 +27,7 @@ do
             color=""
 
             # Read color option
-            set -- $args
+            eval "set -- $args"
             module="$1"
             shift
 
