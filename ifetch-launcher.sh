@@ -5,13 +5,17 @@ case "$1" in
         cat /etc/ifetch/help.txt
         ;;
     -v|--version)
-        echo ifetch: 1.0.5
-        ;; 
+        echo "ifetch: 1.0.5"
+        ;;
     "")
-        /etc/ifetch/ifetch.sh "$1"
+        /etc/ifetch/ifetch.sh
+        ;;
+    -*)
+        echo "Unknown option: $1"
+        echo "Use 'ifetch --help' for help"
+        exit 1
         ;;
     *)
-        echo "Unkown option: $1"
-        echo "use 'ifetch --help' for help"
+        /etc/ifetch/ifetch.sh "$1"
         ;;
 esac

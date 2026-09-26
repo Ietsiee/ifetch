@@ -1,10 +1,13 @@
 ifetch help page
 
-Usage: fetch
+Usage: ifetch
 
 Example: ifetch -v
 
 Options:
+    <customconfigpath>
+        use a custom configuration file
+    
     -h, --help
         shows this help page
 
