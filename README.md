@@ -100,6 +100,11 @@ esac
 ## Feedback
 Found a bug or have an idea for ifetch? Open an issue and let me know!
 
+## Clone ifetch 
+```
+git clone https://github.com/Ietsiee/ifetch.git
+```
+
 ## APIs
 - Binance - crypto prices
 - wttr.in - weather

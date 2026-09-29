@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Network: $(ip -o -4 addr show scope global | awk '{print $4}' | cut -d/ -f1 | head -1)"
+echo "Network: $(ip -4 addr show scope global | awk '/inet / {print $2; exit}' | cut -d/ -f1)"

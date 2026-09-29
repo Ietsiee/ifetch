@@ -5,7 +5,7 @@ Usage: ifetch
 Example: ifetch -v
 
 Options:
-    <customconfigpath>
+    <config path>
         use a custom configuration file
     
     -h, --help

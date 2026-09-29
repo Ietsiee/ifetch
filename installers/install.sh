@@ -28,24 +28,24 @@ mv ifetch-main ifetch
 
 cd ifetch
 
-chmod +x modules/*
-chmod +x ifetch.sh
-chmod +x ifetch-launcher.sh    
-
 echo "[*] Installing ifetch..."
+
+chmod +x ifetch-launcher.sh
+chmod +x ifetch.sh
+chmod +x modules/*
+
+sudo mkdir -p /usr/bin
+
 sudo cp ifetch-launcher.sh /usr/bin/ifetch
 
 sudo mkdir -p /etc/ifetch
 sudo cp ifetch.sh /etc/ifetch/ifetch.sh
-sudo cp -r modules /etc/ifetch/modules
+sudo cp ifetch.config /etc/ifetch/ifetch.config
 sudo cp help.txt /etc/ifetch/help.txt
 sudo cp logo.txt /etc/ifetch/logo.txt
-sudo cp ifetch.config /etc/ifetch/ifetch.config
+	
+sudo cp -r modules /etc/ifetch/
+sudo cp -r presets /etc/ifetch/
 
-echo "[*] Cleaning up..."
-cd ..
-rm -rf ifetch
-rm -f ifetch.tar.gz
-
-echo "[+] Successfully installed ifetch!"
+echo "[+] Successfully installed ifetch"
 ifetch

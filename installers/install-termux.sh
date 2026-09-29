@@ -29,27 +29,35 @@ mv ifetch-main ifetch
 
 cd ifetch
 
-chmod +x modules/*
-chmod +x ifetch.sh
-chmod +x ifetch-launcher.sh    
-
 echo "[*] Installing ifetch..."
+
 sed -i 's|/etc/ifetch/ifetch.sh|"$PREFIX/etc/ifetch/ifetch.sh"|g' ifetch-launcher.sh
 sed -i 's|/etc/ifetch/help.txt|"$PREFIX/etc/ifetch/help.txt"|g' ifetch-launcher.sh
+
+
+chmod +x ifetch-launcher.sh
+chmod +x ifetch.sh
+chmod +x modules/*
+
 cp ifetch-launcher.sh "$PREFIX/bin/ifetch"
 
 mkdir -p "$PREFIX/etc/ifetch"
-sed -i 's|/etc/ifetch/modules/\$module\.sh|"$PREFIX/etc/ifetch/modules/$module.sh"|g' ifetch.sh
 cp ifetch.sh "$PREFIX/etc/ifetch/ifetch.sh"
-cp -r modules "$PREFIX/etc/ifetch/modules"
+cp ifetch.config "$PREFIX/etc/ifetch/ifetch.config"
 cp help.txt "$PREFIX/etc/ifetch/help.txt"
 cp logo.txt "$PREFIX/etc/ifetch/logo.txt"
-cp ifetch.config "$PREFIX/etc/ifetch/ifetch.config"
+	
+cp -r modules "$PREFIX/etc/ifetch/"
+cp -r presets "$PREFIX/etc/ifetch/"
+
+mkdir -p "$HOME/.config/ifetch"
+cp -r modules "$HOME/.config/ifetch/"
+cp -r presets "$HOME/.config/ifetch/"
 
 echo "[*] Cleaning up..."
 cd ..
 rm -rf ifetch
 rm -f ifetch.tar.gz
 
-echo "[+] Successfully installed ifetch!"
+echo "[+] Successfully installed ifetch"
 ifetch

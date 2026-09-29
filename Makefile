@@ -1,33 +1,24 @@
-PREFIX  ?= /usr
-BINDIR  := $(PREFIX)/bin
-CONFDIR := /etc/ifetch
+PREFIX ?= /usr
 
-.PHONY: all install uninstall
-
-all: install
+.PHONY: install uninstall
 
 install:
-	@echo "Installing ifetch..."
+	chmod +x ifetch-launcher.sh
+	chmod +x ifetch.sh
+	chmod +x modules/*
 
-	@install -d $(BINDIR)
-	@install -d $(CONFDIR)
-	@install -d $(CONFDIR)/modules
+    mkdir -p $(PREFIX)/bin
+	cp ifetch-launcher.sh $(PREFIX)/bin/ifetch
 
-	@install -m 755 ifetch-launcher.sh $(BINDIR)/ifetch
-	@install -m 755 ifetch.sh $(CONFDIR)/ifetch.sh
-
-	@install -m 755 modules/* $(CONFDIR)/modules/
-
-	@install -m 644 ifetch.config $(CONFDIR)/ifetch.config
-	@install -m 644 help.txt $(CONFDIR)/help.txt
-	@install -m 644 logo.txt $(CONFDIR)/logo.txt
-
-	@echo "ifetch installed successfully!"
+	mkdir -p /etc/ifetch
+	cp ifetch.sh /etc/ifetch/ifetch.sh
+	cp ifetch.config /etc/ifetch/ifetch.config
+	cp help.txt /etc/ifetch/help.txt
+	cp logo.txt /etc/ifetch/logo.txt
+	
+    cp -r modules /etc/ifetch/
+	cp -r presets /etc/ifetch/
 
 uninstall:
-	@echo "Uninstalling ifetch..."
-
-	@rm -f $(BINDIR)/ifetch
-	@rm -rf $(CONFDIR)
-
-	@echo "ifetch uninstalled!"
+	rm -f $(PREFIX)/bin/ifetch
+	rm -rf /etc/ifetch
