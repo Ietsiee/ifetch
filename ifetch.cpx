@@ -1,0 +1,9 @@
+package="ifetch"
+source="https://github.com/Ietsiee/ifetch/archive/refs/heads/main.tar.gz"
+type="tar.gz"
+deps="curl"
+
+prepare="mv ifetch-main ifetch && cd ifetch"
+configure=""
+build=""
+install="make install"

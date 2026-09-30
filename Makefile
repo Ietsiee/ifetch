@@ -7,7 +7,7 @@ install:
 	chmod +x ifetch.sh
 	chmod +x modules/*
 
-    mkdir -p $(PREFIX)/bin
+	mkdir -p $(PREFIX)/bin
 	cp ifetch-launcher.sh $(PREFIX)/bin/ifetch
 
 	mkdir -p /etc/ifetch
@@ -16,7 +16,7 @@ install:
 	cp help.txt /etc/ifetch/help.txt
 	cp logo.txt /etc/ifetch/logo.txt
 	
-    cp -r modules /etc/ifetch/
+	cp -r modules /etc/ifetch/
 	cp -r presets /etc/ifetch/
 
 uninstall:

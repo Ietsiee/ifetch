@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Process: $(ps -e --no-headers | wc -l)"
+echo "Process: $(ps | awk 'NR > 1 { n++ } END { print n + 0 }')"

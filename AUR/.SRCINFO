@@ -5,7 +5,6 @@ pkgbase = ifetch
 	url = https://github.com/Ietsiee/ifetch
 	arch = any
 	license = MIT
-	depends = sh
 	depends = curl
 	source = https://github.com/Ietsiee/ifetch/archive/refs/tags/v1.0.5.tar.gz
 	sha256sums = SKIP
