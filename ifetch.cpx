@@ -5,5 +5,5 @@ deps="curl"
 
 prepare="mv ifetch-main ifetch && cd ifetch"
 configure=""
-build=""
-install="make install"
+build="sh build.sh"
+install="sh build.sh install"

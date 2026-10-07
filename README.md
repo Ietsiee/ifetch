@@ -34,9 +34,12 @@ You can install ifetch using one of the following methods.
 > To prevent losing your configuration, create your config at `~/.config/ifetch/ifetch.config`.
 
 ### Linux
-**Requirements:** `sudo`, `tar` and `wget`
+**Requirements:** `sudo` and `git`
 ```
-curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install.sh | sh
+git clone https://github.com/Ietsiee/ifetch.git
+cd ifetch
+sh build.sh
+sudo sh build.sh install
 ```
 
 ### Termux Unstable
