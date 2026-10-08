@@ -13,12 +13,13 @@ ifetch is a fast and lightweight tool for displaying system information, written
 - Written entirely in POSIX shell
 - Lightweight with no unnecessary dependencies
 - Simple configuration
-- Easy to make custom modules
+- Easy to create custom modules
 
 ## Usage
 - ```ifetch``` Runs ifetch
-- ```ifetch <config path>``` Runs ifetch with custom config path
-- ```ifetch -h / --help``` Shows help.txt
+- ```ifetch <config path>``` Runs ifetch with a custom configuration file
+- ```ifetch -p / --presets``` Shows all installed presets
+- ```ifetch -h / --help``` Shows the ifetch help page
 - ```ifetch -v / --version``` Shows current version
 
 ## Requirements
@@ -65,40 +66,7 @@ sudo make install
 ```
 
 ## Custom Modules
-Creating Your Own Modules
-You can create your own modules by creating a shell script in "/etc/ifetch/modules/".
-
-For example:
-```
-sudo nano /etc/ifetch/modules/CustomModule.sh
-```
-
-Add the following shebang at the top of the file:
-```
-#!/bin/sh
-```
-
-Then make the module executable:
-```
-sudo chmod +x /etc/ifetch/modules/CustomModule.sh
-```
-
-Modules are regular POSIX shell scripts, so you can use standard shell features such as "case" statements, and create your own custom options.
-
-For example:
-```
-case "$1" in
-    -g)
-        echo ":)"
-        ;;
-    -h)
-        echo "-h option"
-        ;;
-    *)
-        echo "Default option"
-        ;;
-esac
-```
+See the [Custom Modules Guide](docs/custom-modules.md) for more information.
 
 ## Feedback
 Found a bug or have an idea for ifetch? Open an issue and let me know!

@@ -12,4 +12,4 @@ else
     pkgs="Unknown"
 fi
 
-echo "Pkgs: $pkgs"
+echo "Packages: $pkgs"

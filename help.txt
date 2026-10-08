@@ -8,6 +8,9 @@ Options:
     <config path>
         use a custom configuration file
     
+    -p, --presets
+        shows all installed presets
+
     -h, --help
         shows this help page
 
@@ -15,96 +18,105 @@ Options:
         shows current version of ifetch
 
 Files:
+    /etc/ifetch/presets/
+        system-wide ifetch presets
+    
     /etc/ifetch/ifetch.config
         system-wide configuration file
 
     ~/.config/ifetch/ifetch.config
-        users configuration file, you can edit this
+        users configuration file - empty by default
 
     /etc/ifetch/logo.txt
         system-wide ifetch logo
 
     ~/.config/ifetch/logo.txt
-        users ifetch logo, you can edit this
+        users ifetch logo - empty by default
 
     /etc/ifetch/help.txt
         ifetch help page
 
-    /etc/ifetch/modules
+    /etc/ifetch/modules/
         modules like user.sh, logo.sh and more
 
-Configuration: module=<name> <option> <color>
+Configuration: module=<name> <options>
 
 Example: module=ram -g --color green
 
 Modules:
-    user
-        shows current user
+user
+    shows current user
 
-    hostname
-        shows the system hostname
+hostname
+    shows the system hostname
 
-    kernel
-        shows the linux kernel version
+kernel
+    shows the Linux kernel version
 
-    logo
-        displays the ASCII logo in /etc/ifetch/logo.txt
+logo
+    displays the ASCII logo in /etc/ifetch/logo.txt
 
-    shell
-        shows the current used shell
+shell
+    shows the current used shell
 
-    timezone
-        shows the timezone of the system
+timezone
+    shows the timezone of the system
 
-    language
-        shows the language of the system
-  
-    os
-        shows the os name
+language
+    shows the language of the system
 
-    uptime
-        shows how long the system has been running
+os
+    shows the OS name
 
-    ram
-        shows ram usage of the system
-        Option: -g to show it in GB instead of MB
-    
-    disk
-        shows disk usage
-        Option: -t to show it in TB instead of GB
+uptime
+    shows how long the system has been running
 
-    cpu
-        shows the cpu name
+ram
+    shows RAM usage of the system
+    Option: -g to show it in GB instead of MB
 
-    network
-        shows the local-ip of the system
+disk
+    shows disk usage
+    Option: -t to show it in TB instead of GB
 
-    separator
-        creates a separator line
+cpu
+    shows the CPU name
 
-    echo
-        prints a custom message
-        module=echo "I Love Linux" --color blue
+network
+    shows the local-ip of the system
 
-    command
-        run a custom command
-        module=command "cd && cd .."
+separator
+    creates a separator line
 
-    temperature
-        shows the current temperature of the system
+echo
+    prints a custom message
+    module=echo "I Love Linux" --color blue
 
-    weather
-        shows the current weather of a city in °C 
-        module=weather <city>
+command
+    run a custom command
+    module=command "cd && cd .."
 
-    crypto
-        shows the price of a cryptocoin in $
-        module=crypto <cryptocoin>
+temperature
+    shows the current temperature of the system
 
-    process
-        shows the total number of processes currently running
+weather
+    shows the current weather of a city in °C
+    module=weather <city>
 
-    pkgs
-        shows the total installed packages, supported package managers: dpkg apk pacman emerge
+crypto
+    shows the price of a cryptocoin in $
+    module=crypto <cryptocoin>
+
+process
+    shows the total number of processes currently running
+
+packages
+    shows the total installed packages, supported package managers: dpkg apk pacman emerge
+
+tty
+    shows the current tty
+
+dns
+    shows the dns of the system
 
 Colors: black red green yellow blue mangenta cyan white
