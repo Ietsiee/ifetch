@@ -2,7 +2,7 @@ PREFIX ?= /usr
 
 .PHONY: install uninstall
 
-install:
+install: uninstall
 	chmod +x ifetch-launcher.sh
 	chmod +x ifetch.sh
 	chmod +x modules/*

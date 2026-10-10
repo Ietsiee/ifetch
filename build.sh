@@ -3,6 +3,11 @@ set -e
 
 case "$1" in
     install)
+        rm -f /usr/bin/ifetch
+        rm -rf /etc/ifetch
+       
+        sh build.sh
+
         echo  "[*] Installing ifetch..."
         mkdir -p /usr/bin
         cp ifetch-launcher.sh /usr/bin/ifetch

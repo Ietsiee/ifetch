@@ -1,24 +1,14 @@
 #!/bin/sh
 set -e
 
+mkdir -p "$PREFIX/tmp"
 cd "$PREFIX/tmp"
 
 rm -rf ifetch
 
-cat << "EOF"
- _  __      _       _
-(_)/ _| ___| |_ ___| |__
-| | |_ / _ \ __/ __| '_ \
-| |  _|  __/ || (__| | | |
-|_|_|  \___|\__\___|_| |_|
-EOF
-
-if command -v ifetch >/dev/null 2>&1; then
-    echo "[*] Updating ifetch..."
-    rm -rf "$PREFIX/etc/ifetch"
-    rm -rf "$PREFIX/bin/ifetch"
-    rm -rf "$PREFIX/usr/bin/ifetch"
-fi
+rm -rf "$PREFIX/etc/ifetch"
+rm -rf "$PREFIX/bin/ifetch"
+rm -rf "$PREFIX/usr/bin/ifetch"
 
 echo "[*] Downloading ifetch.tar.gz..."
 wget -q -O ifetch.tar.gz https://github.com/Ietsiee/ifetch/archive/refs/heads/main.tar.gz
@@ -29,16 +19,20 @@ mv ifetch-main ifetch
 
 cd ifetch
 
-echo "[*] Installing ifetch..."
-
+echo "[*] Building ifetch..."
 sed -i 's|/etc/ifetch/ifetch.sh|"$PREFIX/etc/ifetch/ifetch.sh"|g' ifetch-launcher.sh
 sed -i 's|/etc/ifetch/help.txt|"$PREFIX/etc/ifetch/help.txt"|g' ifetch-launcher.sh
+sed -i 's|/etc/ifetch/presets|"$PREFIX/etc/ifetch/presets"|g' ifetch-launcher.sh
 
+sed -i 's|/etc/ifetch/logo.txt|"$PREFIX/etc/ifetch/logo.txt"|g' logo.sh
 
 chmod +x ifetch-launcher.sh
 chmod +x ifetch.sh
 chmod +x modules/*
 
+echo "[+] Successfully build ifetch"
+
+echo "[*] Installing ifetch..."
 cp ifetch-launcher.sh "$PREFIX/bin/ifetch"
 
 mkdir -p "$PREFIX/etc/ifetch"
@@ -49,10 +43,6 @@ cp logo.txt "$PREFIX/etc/ifetch/logo.txt"
 	
 cp -r modules "$PREFIX/etc/ifetch/"
 cp -r presets "$PREFIX/etc/ifetch/"
-
-mkdir -p "$HOME/.config/ifetch"
-cp -r modules "$HOME/.config/ifetch/"
-cp -r presets "$HOME/.config/ifetch/"
 
 echo "[*] Cleaning up..."
 cd ..

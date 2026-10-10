@@ -39,12 +39,11 @@ You can install ifetch using one of the following methods.
 ```
 git clone https://github.com/Ietsiee/ifetch.git
 cd ifetch
-sh build.sh
 sudo sh build.sh install
 ```
 
 ### Termux Unstable
-**Requirements:** `tar` and `wget`
+**Requirements:** `tar`, `sed` and `wget`
 ```
 curl -fsSL https://raw.githubusercontent.com/Ietsiee/ifetch/main/installers/install-termux.sh | sh
 ```
