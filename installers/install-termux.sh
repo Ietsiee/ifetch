@@ -24,7 +24,7 @@ sed -i 's|/etc/ifetch/ifetch.sh|"$PREFIX/etc/ifetch/ifetch.sh"|g' ifetch-launche
 sed -i 's|/etc/ifetch/help.txt|"$PREFIX/etc/ifetch/help.txt"|g' ifetch-launcher.sh
 sed -i 's|/etc/ifetch/presets|"$PREFIX/etc/ifetch/presets"|g' ifetch-launcher.sh
 
-sed -i 's|/etc/ifetch/logo.txt|"$PREFIX/etc/ifetch/logo.txt"|g' logo.sh
+sed -i 's|/etc/ifetch/logo.txt|"$PREFIX/etc/ifetch/logo.txt"|g' logo.txt
 
 chmod +x ifetch-launcher.sh
 chmod +x ifetch.sh
